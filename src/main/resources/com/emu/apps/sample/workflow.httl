@@ -1,0 +1,16 @@
+<!-- # # Define variable type, undefined variables of type Object Processing-->
+<!-- #set(Config config)-->
+
+<job id="bigbangjob" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/jobXML_1_0.xsd" version="1.0">
+    <!-- #for(Step step : config.steps)-->
+            <step id="${step.name}"  >
+                <chunk item-count="${step.chunk}">
+                    <reader ref="bigBangReader"/>
+                    <processor ref="${step.processor}"/>
+                    <writer ref="bigBangWriter"/>
+                </chunk>
+            </step>
+    <!-- #end-->
+
+</job>

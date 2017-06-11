@@ -1,0 +1,16 @@
+{
+  "steps": [
+    {
+      "name": "steps1",
+      "chunk": "20000",
+      "sourceTableName": "TABLE1"
+    },
+    {
+      "name": "step2",
+      "chunk": "1000",
+      "sourceTableName": "FUND"
+    }
+  ]
+}
+
+
